@@ -1,24 +1,24 @@
 How to build
-------------------
+================
 
 ```bash
 git clone https://github.com/MoZhonghua/docker-ss
 
 cd docker-ss/base
-docker built -t ss/base .
+docker build -t ss/base .
 
 cd ../client
-docker built -t ss/client .
+docker build -t ss/client .
 
 cd ../server
-docker built -t ss/server .
+docker build -t ss/server .
 ```
 
 Start Shadowsocks client and polipo
-------------------
+================
 
 Start using environment variables
-===========================
+------------
 
 ```bash
 docker run -d --name ssclient --restart=always \
@@ -33,7 +33,7 @@ docker run -d --name ssclient --restart=always \
 ```
 
 Environment variables
-=========================
+----------------
 `SERVER`: IP address of your Shadowsocks server
 
 `SERVER_PORT`: Listening port of your Shadowsocks server
@@ -46,7 +46,7 @@ Environment variables
 
 
 Start uinsg exsting configuration file
-=========================
+--------------
 ```bash
 mkdir shadowsocks
 cp client/sslocal.conf.example shadowsocks/sslocal.conf
@@ -61,10 +61,10 @@ docker run -d --name ssclient --restart=always \
 ```
 
 Start Shadowsocks server
----------------------
+================
 
 Start using environment variables
-===========================
+------------
 
 ```bash
 docker run -d --name=ssserver --restart=always \
@@ -75,13 +75,13 @@ docker run -d --name=ssserver --restart=always \
 ```
 
 Environment variables
-===========================
+------------
 `SERVER_PORT`: Listening port of your Shadowsocks server
 
 `PASSWORD`: Password of Shadowsocks server
 
 Start uinsg exsting configuration file
-=========================
+------------
 ```bash
 mkdir shadowsocks
 cp server/ssserver.conf.example shadowsocks/ssserver.conf
