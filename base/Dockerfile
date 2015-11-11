@@ -1,4 +1,4 @@
-FROM ubuntu:14.02
+FROM ubuntu:14.04
 MAINTAINER mozhonghua@sursen.net
 
 # Switch to 163 mirror
