@@ -10,4 +10,4 @@ RUN apt-get update
 RUN apt-get install python-pip -y
 RUN apt-get install polipo -y
 RUN pip install shadowsocks==2.8.2
-RUM rm -fv /tmp/setup-163-mirror.sh
+RUN rm -fv /tmp/setup-163-mirror.sh
