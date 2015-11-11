@@ -1,0 +1,9 @@
+{
+    "server" : "45.62.113.246",
+    "server_port" : 4433,
+    "local_port" : 8091,
+    "password" : "NGI5NmY4MT",
+    "timeout" : 600,
+    "method" : "aes-256-cfb"
+}
+
