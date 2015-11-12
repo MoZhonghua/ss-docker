@@ -50,8 +50,6 @@ Start uinsg exsting configuration file
 ```bash
 mkdir shadowsocks
 cp client/sslocal.conf.example shadowsocks/sslocal.conf
-
-# mdoify shadowsocks/sslocal.conf
 docker run -d --name ssclient --restart=always \
     -v $(pwd)/shadowsocks:/etc/shadowsocks \
     -p 8091:8091 \
@@ -86,7 +84,6 @@ Start uinsg exsting configuration file
 mkdir shadowsocks
 cp server/ssserver.conf.example shadowsocks/ssserver.conf
 
-# mdoify shadowsocks/sslocal.conf
 docker run -d --name ssserver --restart=always \
     -v $(pwd)/shadowsocks:/etc/shadowsocks \
     -p 8388:8388 \
